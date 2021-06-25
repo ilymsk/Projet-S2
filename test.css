@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+         background: #222222;
+        color: white;
+        font-family: 'DIN Alternate';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+}
+
+h1 {
+  color: white;
+  font-family: 'DIN Alternate';
+  display: flex;
+  justify-content: center;
+  position : absolute;
+  bottom: 700px;
+
+}
+
+ol {
+
+    list-style: none;
+    width: 300px;
+
+}
+
+ol li {
+
+          font-size: 1.2rem;
+          background: #222222;
+          margin: 10px 0;
+          padding: 20px 30px;
+          cursor: pointer;
+          position: relative;
+          transition: all .3s;
+          z-index: 5;
+}
+
+ol li::before {
+
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 5px;
+                background: red;
+                transition: all .4s;
+                z-index: -1;
+
+
+}
+
+ol li:hover::before {
+
+                      width: 100%;
+
+}
+
+ol li:nth-child(1)::before {
+                              background: #4285F4;
+                              border: 1px solid #4285F4;
+
+}
+
+ol li:nth-child(2)::before {
+                              background: crimson;
+                              border: 1px solid crimson;
+
+}
+
+ol li:nth-child(3)::before {
+                              background: #f4b400;
+                              border: 1px solid #f4b400;
+
+}
+
+ol li:nth-child(4)::before {
+                              background: #0f9d58;
+                              border: 1px solid #0f9d58;
+
+}
+
+ol li:nth-child(5)::before {
+                              background: #420A92;
+                              border: 1px solid #420A92;
+
+}
+
+ol li:hover {
+
+              transform: translateX(20px);
+}
+
+.login-popup {
+position: absolute;
+text-align: center;
+width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+display: none;
+position: fixed;
+left: 49.2%;
+top:20%;
+transform: translate(-45%,5%);
+border: 2px solid #666;
+z-index: 9;
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+max-width: 600px;
+max-height: 400px;
+padding: 60px;
+background-color: #222222;
+}
+/* Largeur complète pour les champs de saisie */
+.form-container input[type=text], .form-container input[type=password] {
+width: 100%;
+padding: 10px;
+margin: 5px 0 22px 0;
+border: none;
+background: transparent;
+color : crimson;
+}
+/* Quand les entrées sont concentrées, faites quelque chose */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+/* Stylez le bouton de connexion */
+.form-container .btn {
+background-color: #4285F4;
+color: #fff;
+padding: 12px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+background-color: crimson;
+}
+/* Planez les effets pour les boutons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
+}
+
+.Guess {
+
+  position: fixed;
+  max-width: 400px;
+  bottom: 100px;
+  left: 500px
+
+}
+
+.Guess input[type=number], {
+width: 100%;
+padding: 10px;
+margin: 5px 0 22px 0;
+border: none;
+background: crimson;
+}
+
+#guess {
+  position: fixed;
+  max-width: 150px;
+  font-family: 'DIN Alternate';
+  font-size: 20px;
+  max-height: 50px;
+  bottom: 700px;
+  left: 500px;
+  background: transparent;
+  color : crimson;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 22px 0;
+  border: 2px solid #666;
+  border-radius: 30px;
+}
+
+#submitGuess {
+
+  position: fixed;
+  font-family: 'DIN Alternate';
+  font-size: 20px;
+  max-width: 100px;
+  max-height: 50px;
+  bottom: 700px;
+  left: 660px;
+  background: transparent;
+  color : crimson;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 22px 0;
+  border: 2px solid #666;
+  border-radius: 30px;
+
+}
+
+#submitGuess:hover {
+  background: crimson;
+  color : #222222;
+  opacity:0.9;
+  }
